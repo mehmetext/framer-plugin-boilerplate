@@ -5,6 +5,7 @@ import Input from "./components/input";
 import Textarea from "./components/textarea";
 import Select from "./components/select";
 import Spinner from "./components/spinner";
+import Checkbox from "./components/checkbox";
 
 framer.showUI({
   position: "top right",
@@ -17,6 +18,10 @@ export function App() {
       <Button>Primary</Button>
       <Button variant="secondary">Secondary</Button>
       <Button variant="danger">Danger</Button>
+      <Button variant="danger" disabled>
+        <Spinner className="bg-[var(--framer-color-text-reversed)]" />{" "}
+        Yükleniyor...
+      </Button>
       <Input placeholder="input" />
       <Textarea placeholder="textarea" />
       <Select>
@@ -24,12 +29,14 @@ export function App() {
         <option value="2">2</option>
       </Select>
       <Input type="color" />
+      <Input type="range" />
+      <Input type="date" />
+      <Input type="time" />
+      <Input type="file" />
       <Spinner />
       <Spinner size="large" />
-      <Button variant="danger" disabled>
-        <Spinner className="bg-[var(--framer-color-text-reversed)]" />{" "}
-        Yükleniyor...
-      </Button>
+
+      <Checkbox />
     </main>
   );
 }

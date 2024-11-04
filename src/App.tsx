@@ -35,7 +35,6 @@ export function App() {
       <Input type="file" />
       <Spinner />
       <Spinner size="large" />
-
       <Checkbox />
     </main>
   );

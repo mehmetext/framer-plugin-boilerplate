@@ -1,12 +1,17 @@
 import { framer } from "framer-plugin";
 import "./App.css";
+import Button from "./components/button";
 
 framer.showUI({
   position: "top right",
   width: 240,
-  height: 95,
 });
 
 export function App() {
-  return <main>Example Plugin</main>;
+  return (
+    <main>
+      <Button>Primary</Button>
+      <Button variant="secondary">Secondary</Button>
+    </main>
+  );
 }

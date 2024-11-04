@@ -1,7 +1,8 @@
 import { ButtonHTMLAttributes } from "react";
+import { cn } from "../lib/utils";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "danger";
   children: React.ReactNode;
 }
 
@@ -10,11 +11,17 @@ export default function Button({
   variant = "primary",
   ...props
 }: ButtonProps) {
-  const variantClass =
-    variant === "primary" ? "framer-button-primary" : undefined;
-
   return (
-    <button className={variantClass} {...props}>
+    <button
+      className={cn("flex items-center justify-center gap-2 w-auto px-2.5", {
+        "framer-button-primary": variant === "primary",
+        "bg-[var(--framer-color-bg-tertiary)] hover:bg-[var(--framer-color-bg-secondary)] active:bg-[#ddd] disabled:bg-[var(--framer-color-bg-tertiary)]":
+          variant === "secondary",
+        "bg-red-500 hover:bg-red-600 focus:bg-red-600 active:bg-red-700 disabled:bg-red-500 text-[var(--framer-color-text-reversed)]":
+          variant === "danger",
+      })}
+      {...props}
+    >
       {children}
     </button>
   );

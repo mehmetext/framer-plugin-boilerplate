@@ -7,6 +7,7 @@ import Select from "./components/select";
 import Spinner from "./components/spinner";
 import Checkbox from "./components/checkbox";
 import Segmented from "./components/segmented";
+import Stepper from "./components/stepper";
 
 framer.showUI({
   position: "top right",
@@ -23,6 +24,7 @@ export function App() {
           { value: "maybe", label: "Maybe" },
         ]}
       />
+      <Stepper value={10} onChange={(value) => console.log(value)} />
       <Button>Primary</Button>
       <Button variant="secondary">Secondary</Button>
       <Button variant="danger">Danger</Button>

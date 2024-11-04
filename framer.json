@@ -1,8 +1,6 @@
 {
   "id": "8857df",
   "name": "Framer Plugin Boilerplate",
-  "modes": [
-    "canvas"
-  ],
+  "modes": ["canvas"],
   "icon": "/icon.svg"
 }

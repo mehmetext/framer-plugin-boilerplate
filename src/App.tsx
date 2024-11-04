@@ -6,6 +6,7 @@ import Textarea from "./components/textarea";
 import Select from "./components/select";
 import Spinner from "./components/spinner";
 import Checkbox from "./components/checkbox";
+import Segmented from "./components/segmented";
 
 framer.showUI({
   position: "top right",
@@ -15,6 +16,13 @@ framer.showUI({
 export function App() {
   return (
     <main className="p-2 flex flex-col gap-2 ">
+      <Segmented
+        items={[
+          { value: "yes", label: "Yes" },
+          { value: "no", label: "No" },
+          { value: "maybe", label: "Maybe" },
+        ]}
+      />
       <Button>Primary</Button>
       <Button variant="secondary">Secondary</Button>
       <Button variant="danger">Danger</Button>

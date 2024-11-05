@@ -46,7 +46,7 @@ function SegmentedItem({
   return (
     <div
       className={cn(
-        "flex-1 flex items-center justify-center rounded-lg bg-transparent transition relative p-1.5 text-[var(--framer-color-tint)] cursor-pointer select-none",
+        "flex-1 flex items-center justify-center rounded-md bg-transparent transition relative p-1.5 text-[var(--framer-color-tint)] cursor-pointer select-none",
         {
           " text-[var(--framer-color-text-tertiary)]": !selected,
         }
@@ -55,7 +55,7 @@ function SegmentedItem({
     >
       {selected && (
         <motion.div
-          className="bg-white absolute inset-0 rounded-lg shadow-sm"
+          className="bg-white absolute inset-0 rounded-md shadow-sm"
           layoutId="segmented"
         />
       )}

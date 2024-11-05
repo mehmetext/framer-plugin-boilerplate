@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "../lib/utils";
 
@@ -20,21 +20,39 @@ export default function Segmented({
   onChange,
 }: SegmentedProps) {
   const [selected, setSelected] = useState(value ?? items[0]?.value);
+  const layoutId = useId();
 
   return (
     <div className="h-7.5 bg-[var(--framer-color-bg-tertiary)] rounded-lg p-1 flex">
       <AnimatePresence>
         {items.map((item, i) => (
-          <SegmentedItem
-            key={i}
-            selected={selected === item.value}
-            onClick={() => {
-              setSelected(item.value);
-              onChange?.(item.value);
-            }}
-          >
-            {item.label}
-          </SegmentedItem>
+          <>
+            <SegmentedItem
+              key={i}
+              selected={selected === item.value}
+              onClick={() => {
+                setSelected(item.value);
+                onChange?.(item.value);
+              }}
+              layoutId={layoutId}
+            >
+              {item.label}
+            </SegmentedItem>
+            {i < items.length - 1 && (
+              <div
+                className={cn(
+                  "self-center w-px h-3 bg-[var(--framer-color-text-tertiary)] transition",
+                  {
+                    "opacity-0":
+                      items.findIndex((item) => item.value === selected) ===
+                        i ||
+                      items.findIndex((item) => item.value === selected) ===
+                        i + 1,
+                  }
+                )}
+              />
+            )}
+          </>
         ))}
       </AnimatePresence>
     </div>
@@ -45,10 +63,12 @@ function SegmentedItem({
   children,
   selected,
   onClick,
+  layoutId,
 }: {
   children: React.ReactNode;
   selected: boolean;
   onClick: () => void;
+  layoutId: string;
 }) {
   return (
     <div
@@ -68,7 +88,7 @@ function SegmentedItem({
             ease: "easeOut",
           }}
           className="bg-[var(--framer-color-bg)] dark:bg-[var(--framer-color-text-tertiary)] absolute inset-0 rounded-md shadow-md"
-          layoutId="segmented"
+          layoutId={layoutId}
         />
       )}
       <span className="z-10">{children}</span>

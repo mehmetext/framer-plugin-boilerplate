@@ -36,6 +36,7 @@ export default function Home() {
           { value: "maybe", label: "Maybe" },
         ]}
       />
+      <Segmented />
       <Stepper value={10} onChange={(value) => console.log(value)} />
       <Button
         onClick={() => {

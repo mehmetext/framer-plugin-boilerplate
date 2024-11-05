@@ -59,11 +59,11 @@ bun dev
 │   ├── components/     # Reusable UI components
 │   ├── screens/        # Page components
 │   ├── navigation/     # Routing system
-│   ├── lib/           # Helper functions
-│   ├── App.tsx        # Main application component
-│   └── main.tsx       # Application entry point
-├── public/            # Static files
-└── framer.json       # Plugin configuration
+│   ├── lib/            # Helper functions
+│   ├── App.tsx         # Main application component
+│   └── main.tsx        # Application entry point
+├── public/             # Static files
+└── framer.json         # Plugin configuration
 ```
 
 ## Ready-to-Use Components

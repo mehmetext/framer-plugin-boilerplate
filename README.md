@@ -1,155 +1,155 @@
 # Framer Plugin Boilerplate
 
-Modern ve güçlü bir Framer Plugin geliştirme başlangıç kiti. Bu boilerplate, TypeScript, React, Tailwind CSS ve Vite kullanarak Framer Plugin'leri geliştirmeniz için hazır bir altyapı sunar.
+A modern and powerful starter kit for Framer Plugin development. This boilerplate provides a ready-to-use infrastructure for developing Framer Plugins using TypeScript, React, Tailwind CSS, and Vite.
 
-## Özellikler
+## Features
 
-- ⚡️ **Vite** ile hızlı geliştirme deneyimi
-- 🎨 **Tailwind CSS** ile kolay stillendirme
-- 🌙 **Otomatik Dark Mode** desteği
-- 🧭 **Route sistemi** ile çoklu sayfa desteği
-- 🎬 **Framer Motion** ile animasyonlar
-- 🔒 **TypeScript** ile tip güvenliği
-- 📦 **Modern component kütüphanesi**
+- ⚡️ Fast development experience with **Vite**
+- 🎨 Easy styling with **Tailwind CSS**
+- 🌙 **Automatic Dark Mode** support
+- 🧭 Multi-page support with **Route system**
+- 🎬 Animations with **Framer Motion**
+- 🔒 Type safety with **TypeScript**
+- 📦 **Modern component library**
 
-## Başlangıç
+## Getting Started
 
-### Gereksinimler
+### Requirements
 
-- Node.js 18.0.0 veya üzeri
-- npm, yarn, pnpm veya bun
+- Node.js 18.0.0 or higher
+- npm, yarn, pnpm, or bun
 
-### Kurulum
+### Installation
 
-1. Bu repository'yi klonlayın:
+1. Clone this repository:
 
 ```bash
 git clone https://github.com/mehmetext/framer-plugin-boilerplate.git
 cd framer-plugin-boilerplate
 ```
 
-2. Bağımlılıkları yükleyin:
+2. Install dependencies:
 
 ```bash
 npm install
-# veya
+# or
 yarn install
-# veya
+# or
 pnpm install
-# veya
+# or
 bun install
 ```
 
-3. Geliştirme sunucusunu başlatın:
+3. Start the development server:
 
 ```bash
 npm run dev
-# veya
+# or
 yarn dev
-# veya
+# or
 pnpm dev
-# veya
+# or
 bun dev
 ```
 
-## Proje Yapısı
+## Project Structure
 
 ```
 ├── src/
-│   ├── components/     # Yeniden kullanılabilir UI bileşenleri
-│   ├── screens/        # Sayfa bileşenleri
-│   ├── navigation/     # Routing sistemi
-│   ├── lib/            # Yardımcı fonksiyonlar
-│   ├── App.tsx         # Ana uygulama bileşeni
-│   └── main.tsx        # Uygulama giriş noktası
-├── public/             # Statik dosyalar
-└── framer.json         # Plugin yapılandırması
+│   ├── components/     # Reusable UI components
+│   ├── screens/        # Page components
+│   ├── navigation/     # Routing system
+│   ├── lib/           # Helper functions
+│   ├── App.tsx        # Main application component
+│   └── main.tsx       # Application entry point
+├── public/            # Static files
+└── framer.json       # Plugin configuration
 ```
 
-## Hazır Bileşenler
+## Ready-to-Use Components
 
-Boilerplate, Framer'ın tasarım sistemine uygun, kullanıma hazır birçok bileşen içerir:
+The boilerplate includes many components that are compatible with Framer's design system:
 
 ### Button
 
-Modern ve kullanışlı buton varyantları:
+Modern and practical button variants:
 
-- Primary (Birincil)
-- Secondary (İkincil)
-- Danger (Tehlike)
-- Success (Başarı)
+- Primary
+- Secondary
+- Danger
+- Success
 
 ![Buttons](./public/docs/buttons.png)
 ![Buttons](./public/docs/buttons-dark.png)
 
 ### Input & Controls
 
-Çeşitli form elemanları:
+Various form elements:
 
-- Text Input (Metin Girişi)
-- Textarea (Çok Satırlı Metin Alanı)
-- Select (Açılır Menü)
-- Number Input (Sayı Girişi)
-- Color Picker (Renk Seçici)
-- Date Picker (Tarih Seçici)
-- File Upload (Dosya Yükleme)
-- Range Slider (Aralık Kaydırıcı)
+- Text Input
+- Textarea
+- Select
+- Number Input
+- Color Picker
+- Date Picker
+- File Upload
+- Range Slider
 
 ![Inputs](./public/docs/inputs.png)
 ![Inputs](./public/docs/inputs-dark.png)
 
 ### Segmented
 
-Bölümlü seçim kontrolü, özelleştirilebilir seçeneklerle:
+Segmented selection control with customizable options:
 
 ![Segmented](./public/docs/segmented.png)
 ![Segmented](./public/docs/segmented-dark.png)
 
 ### Stepper
 
-Hassas sayısal değer kontrolü:
+Precise numerical value control:
 
 ![Stepper](./public/docs/stepper.png)
 ![Stepper](./public/docs/stepper-dark.png)
 
 ### Checkbox
 
-Basit ve etkili işaret kutusu:
+Simple and effective checkbox:
 
 ![Checkbox](./public/docs/checkbox.png)
 ![Checkbox](./public/docs/checkbox-dark.png)
 
 ### Spinner
 
-Yükleme durumları için spinner ve göstergeler:
+Spinners and indicators for loading states:
 
 ![Spinner](./public/docs/spinner.png)
 ![Spinner](./public/docs/spinner-dark.png)
 
-Tüm bileşenler Framer'ın varsayılan tema değişkenlerini kullanır ve otomatik olarak Dark Mode'u destekler.
+All components use Framer's default theme variables and automatically support Dark Mode.
 
 ### AppBar
 
-Sayfa başlığı ve eylemler için uygun bir yapı:
+A suitable structure for page titles and actions:
 
 ![AppBar](./public/docs/app-bar.png)
 ![AppBar](./public/docs/app-bar-2.png)
 
-## Plugin Paketleme
+## Plugin Packaging
 
-Projenizi paketlemek için:
+To package your project:
 
 ```bash
 npm run pack
 ```
 
-Bu komut, Framer'a yüklenmeye hazır bir `plugin.zip` dosyası oluşturacaktır.
+This command will create a `plugin.zip` file ready to be uploaded to Framer.
 
-## Özelleştirme
+## Customization
 
-### Plugin Bilgileri
+### Plugin Information
 
-`framer.json` dosyasını düzenleyerek plugin meta verilerini güncelleyin:
+Update plugin metadata by editing the `framer.json` file:
 
 ```json
 {
@@ -160,15 +160,79 @@ Bu komut, Framer'a yüklenmeye hazır bir `plugin.zip` dosyası oluşturacaktır
 }
 ```
 
-### Tema ve Stiller
+### Theme and Styles
 
-Tailwind yapılandırması `tailwind.config.js` dosyasında bulunur. Framer'ın tema değişkenleriyle otomatik olarak çalışacak şekilde ayarlanmıştır.
+Tailwind configuration is located in `tailwind.config.js`. It's set up to work automatically with Framer's theme variables.
 
-## Lisans
+## License
 
 MIT
 
-## Daha Fazla Bilgi
+## More Information
 
-Framer Plugin geliştirme hakkında daha fazla bilgi için:
-[Framer Plugin Geliştirici Dokümantasyonu](https://www.framer.com/developers/plugins/introduction)
+For more information about Framer Plugin development:
+[Framer Plugin Developer Documentation](https://www.framer.com/developers/plugins/introduction)
+
+## Contributing
+
+I welcome contributions to make this boilerplate even better! Here's how you can help:
+
+### Bug Reports & Feature Requests
+
+- Use the GitHub Issues page to report bugs or suggest features
+- Before creating an issue, please check if a similar issue already exists
+- When reporting bugs, include:
+  - Detailed description of the issue
+  - Steps to reproduce
+  - Expected vs actual behavior
+  - Your environment details (OS, Node version, etc.)
+
+### Pull Requests
+
+1. Fork the repository
+2. Create a new branch:
+
+```bash
+git checkout -b feature/your-feature-name
+# or
+git checkout -b fix/your-bug-fix
+```
+
+3. Make your changes and commit them:
+
+```bash
+git commit -m "Description of changes"
+```
+
+4. Push to your fork:
+
+```bash
+git push origin feature/your-feature-name
+```
+
+5. Open a Pull Request
+
+### Development Guidelines
+
+- Follow the existing code style and conventions
+- Write clear commit messages (please use conventional commits, e.g. `feat: added new feature`)
+- Update documentation as needed
+- Ensure all tests pass before submitting PR
+- Keep PRs focused - one feature or bug fix per PR
+
+### Code of Conduct
+
+- Be respectful and inclusive
+- Provide constructive feedback
+- Help others learn and grow
+- Follow the project's coding standards
+
+### Getting Help
+
+If you need help with your contribution:
+
+- Check the documentation
+- Open a Discussion on GitHub
+- Reach out to me through GitHub issues
+
+Thank you for contributing to make this project better! 🎉

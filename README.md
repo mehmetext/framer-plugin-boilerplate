@@ -144,6 +144,8 @@ A suitable structure for page titles and actions:
 
 All components use Framer's default theme variables and automatically support Dark Mode.
 
+<img src="./public/docs/full-screenshot.png" alt="Full Screenshot" width="300" />
+
 ## Plugin Packaging
 
 To package your project:

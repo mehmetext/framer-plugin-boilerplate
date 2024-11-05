@@ -63,6 +63,10 @@ function SegmentedItem({
     >
       {selected && (
         <motion.div
+          transition={{
+            duration: 0.2,
+            ease: "easeOut",
+          }}
           className="bg-[var(--framer-color-bg)] dark:bg-[var(--framer-color-text-tertiary)] absolute inset-0 rounded-md shadow-md"
           layoutId="segmented"
         />

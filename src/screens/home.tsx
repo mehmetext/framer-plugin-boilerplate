@@ -6,8 +6,10 @@ import Select from "../components/select";
 import Spinner from "../components/spinner";
 import Stepper from "../components/stepper";
 import Textarea from "../components/textarea";
+import { useNavigation } from "../navigation";
 
 export default function Home() {
+  const { navigate } = useNavigation();
   return (
     <main className="p-2 flex flex-col gap-2">
       <Segmented
@@ -18,7 +20,9 @@ export default function Home() {
         ]}
       />
       <Stepper value={10} onChange={(value) => console.log(value)} />
-      <Button>Primary</Button>
+      <Button onClick={() => navigate("Example", { id: "123" })}>
+        Primary
+      </Button>
       <Button variant="secondary">Secondary</Button>
       <Button variant="danger">Danger</Button>
       <Button variant="danger" disabled>

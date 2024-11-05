@@ -7,10 +7,22 @@ import Select from "../components/select";
 import Spinner from "../components/spinner";
 import Stepper from "../components/stepper";
 import Textarea from "../components/textarea";
+import { useNavigation } from "../navigation";
 
 export default function Home() {
+  const navigation = useNavigation();
+
   return (
-    <PageContainer appBar={{ title: "Framer Plugin" }}>
+    <PageContainer
+      appBar={{
+        title: "Framer Plugin",
+        actions: (
+          <Button onClick={() => navigation.navigate("Example")}>
+            Example
+          </Button>
+        ),
+      }}
+    >
       <Segmented
         items={[
           { value: "yes", label: "Yes" },

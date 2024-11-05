@@ -22,7 +22,7 @@ export default function Segmented({
   const [selected, setSelected] = useState(value ?? items[0]?.value);
 
   return (
-    <div className="bg-[var(--framer-color-bg-tertiary)] rounded-lg p-1 flex">
+    <div className="h-7.5 bg-[var(--framer-color-bg-tertiary)] rounded-lg p-1 flex">
       <AnimatePresence>
         {items.map((item, i) => (
           <SegmentedItem
@@ -53,7 +53,7 @@ function SegmentedItem({
   return (
     <div
       className={cn(
-        "flex-1 flex items-center justify-center rounded-md bg-transparent transition relative p-2 text-[var(--framer-color-text-tertiary)] cursor-pointer select-none font-semibold",
+        "flex-1 flex items-center justify-center rounded-md bg-transparent transition relative text-[var(--framer-color-text-tertiary)] cursor-pointer select-none font-semibold",
         {
           "text-[var(--framer-color-tint)] dark:text-[var(--framer-color-text-tint)]":
             selected,

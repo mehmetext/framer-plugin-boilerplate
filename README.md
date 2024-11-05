@@ -79,8 +79,9 @@ Modern and practical button variants:
 - Danger
 - Success
 
-![Buttons](./public/docs/buttons.png)
-![Buttons](./public/docs/buttons-dark.png)
+<img src="./public/docs/buttons.png" alt="Buttons" width="300" />
+<br />
+<img src="./public/docs/buttons-dark.png" alt="Buttons" width="300" />
 
 ### Input & Controls
 
@@ -95,45 +96,53 @@ Various form elements:
 - File Upload
 - Range Slider
 
-![Inputs](./public/docs/inputs.png)
-![Inputs](./public/docs/inputs-dark.png)
+<img src="./public/docs/inputs.png" alt="Inputs" width="300" />
+<br />
+<img src="./public/docs/inputs-dark.png" alt="Inputs" width="300" />
 
 ### Segmented
 
 Segmented selection control with customizable options:
 
-![Segmented](./public/docs/segmented.png)
-![Segmented](./public/docs/segmented-dark.png)
+<img src="./public/docs/segmented.png" alt="Segmented" width="300" />
+<br />
+<img src="./public/docs/segmented-dark.png" alt="Segmented" width="300" />
 
 ### Stepper
 
 Precise numerical value control:
 
-![Stepper](./public/docs/stepper.png)
-![Stepper](./public/docs/stepper-dark.png)
+<img src="./public/docs/stepper.png" alt="Stepper" width="300" />
+<br />
+<img src="./public/docs/stepper-dark.png" alt="Stepper" width="300" />
 
 ### Checkbox
 
 Simple and effective checkbox:
 
-![Checkbox](./public/docs/checkbox.png)
-![Checkbox](./public/docs/checkbox-dark.png)
+<img src="./public/docs/checkbox.png" alt="Checkbox" width="30" />
+<br />
+<img src="./public/docs/checkbox-checked.png" alt="Checkbox" width="30" />
+<br />
+<img src="./public/docs/checkbox-dark.png" alt="Checkbox" width="30" />
 
 ### Spinner
 
 Spinners and indicators for loading states:
 
-![Spinner](./public/docs/spinner.png)
-![Spinner](./public/docs/spinner-dark.png)
-
-All components use Framer's default theme variables and automatically support Dark Mode.
+<img src="./public/docs/spinner.png" alt="Spinner" width="30" />
+<br />
+<img src="./public/docs/spinner-dark.png" alt="Spinner" width="30" />
 
 ### AppBar
 
 A suitable structure for page titles and actions:
 
-![AppBar](./public/docs/app-bar.png)
-![AppBar](./public/docs/app-bar-2.png)
+<img src="./public/docs/app-bar.png" alt="AppBar" width="300" />
+<br />
+<img src="./public/docs/app-bar-2.png" alt="AppBar" width="300" />
+
+All components use Framer's default theme variables and automatically support Dark Mode.
 
 ## Plugin Packaging
 

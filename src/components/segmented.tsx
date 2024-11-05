@@ -22,7 +22,7 @@ export default function Segmented({
   const [selected, setSelected] = useState(value ?? items[0]?.value);
 
   return (
-    <div className="bg-[var(--framer-color-bg-tertiary)] rounded-lg p-0.5 flex">
+    <div className="bg-[var(--framer-color-bg-tertiary)] rounded-lg p-1 flex">
       <AnimatePresence>
         {items.map((item, i) => (
           <SegmentedItem
@@ -53,20 +53,21 @@ function SegmentedItem({
   return (
     <div
       className={cn(
-        "flex-1 flex items-center justify-center rounded-md bg-transparent transition relative p-1.5 text-[var(--framer-color-tint)] cursor-pointer select-none",
+        "flex-1 flex items-center justify-center rounded-md bg-transparent transition relative p-2 text-[var(--framer-color-text-tertiary)] cursor-pointer select-none font-semibold",
         {
-          " text-[var(--framer-color-text-tertiary)]": !selected,
+          "text-[var(--framer-color-tint)] dark:text-[var(--framer-color-text-tint)]":
+            selected,
         }
       )}
       onClick={onClick}
     >
       {selected && (
         <motion.div
-          className="bg-[var(--framer-color-bg)] absolute inset-0 rounded-md shadow-sm"
+          className="bg-[var(--framer-color-bg)] dark:bg-[var(--framer-color-text-tertiary)] absolute inset-0 rounded-md shadow-md"
           layoutId="segmented"
         />
       )}
-      <div className="z-10 relative font-medium">{children}</div>
+      <span className="z-10">{children}</span>
     </div>
   );
 }

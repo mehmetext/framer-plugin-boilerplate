@@ -7,6 +7,8 @@ interface SegmentedProps {
     value: string;
     label: string;
   }[];
+  value?: string;
+  onChange?: (value: string) => void;
 }
 
 export default function Segmented({
@@ -14,8 +16,10 @@ export default function Segmented({
     { value: "yes", label: "Yes" },
     { value: "no", label: "No" },
   ],
+  value,
+  onChange,
 }: SegmentedProps) {
-  const [selected, setSelected] = useState(items[0]?.value);
+  const [selected, setSelected] = useState(value ?? items[0]?.value);
 
   return (
     <div className="bg-[var(--framer-color-bg-tertiary)] rounded-lg p-0.5 flex">
@@ -24,7 +28,10 @@ export default function Segmented({
           <SegmentedItem
             key={i}
             selected={selected === item.value}
-            onClick={() => setSelected(item.value)}
+            onClick={() => {
+              setSelected(item.value);
+              onChange?.(item.value);
+            }}
           >
             {item.label}
           </SegmentedItem>

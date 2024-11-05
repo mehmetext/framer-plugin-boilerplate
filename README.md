@@ -1,5 +1,7 @@
 # Framer Plugin Boilerplate
 
+<img src="./public/docs/cover.png" alt="Cover"/>
+
 A modern and powerful starter kit for Framer Plugin development. This boilerplate provides a ready-to-use infrastructure for developing Framer Plugins using TypeScript, React, Tailwind CSS, and Vite.
 
 ## Features

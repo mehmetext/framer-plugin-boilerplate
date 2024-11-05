@@ -22,11 +22,7 @@ export default function PageContainer({
       {appBar && (
         <header className="sticky top-0 z-20 px-2 h-[2.875rem] flex items-center gap-2 bg-[var(--framer-color-bg)]">
           {navigation.canGoBack() && (
-            <Button
-              onClick={navigation.goBack}
-              className="h-7.5 w-7.5 p-0"
-              variant="secondary"
-            >
+            <Button onClick={navigation.goBack} size="icon" variant="secondary">
               <ChevronLeft className="w-4 h-4" />
             </Button>
           )}

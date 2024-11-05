@@ -9,6 +9,7 @@ import Spinner from "../components/spinner";
 import Stepper from "../components/stepper";
 import Textarea from "../components/textarea";
 import { useNavigation } from "../navigation";
+import { Code } from "lucide-react";
 
 export default function Home() {
   const navigation = useNavigation();
@@ -18,8 +19,12 @@ export default function Home() {
       appBar={{
         title: "Framer Plugin",
         actions: (
-          <Button onClick={() => navigation.navigate("Example")}>
-            Example
+          <Button
+            size="icon"
+            variant="secondary"
+            onClick={() => navigation.navigate("Example")}
+          >
+            <Code className="w-4 h-4" />
           </Button>
         ),
       }}

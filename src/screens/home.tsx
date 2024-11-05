@@ -1,3 +1,4 @@
+import { framer } from "framer-plugin";
 import Button from "../components/button";
 import Checkbox from "../components/checkbox";
 import Input from "../components/input";
@@ -31,7 +32,13 @@ export default function Home() {
         ]}
       />
       <Stepper value={10} onChange={(value) => console.log(value)} />
-      <Button>Primary</Button>
+      <Button
+        onClick={() => {
+          framer.notify("Primary button clicked.");
+        }}
+      >
+        Primary
+      </Button>
       <Button variant="secondary">Secondary</Button>
       <Button variant="danger">Danger</Button>
       <Button variant="danger" disabled>

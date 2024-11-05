@@ -22,9 +22,9 @@ export default function Button({
           "framer-button-primary": variant === "primary",
           "bg-[var(--framer-color-bg-tertiary)] hover:bg-[var(--framer-color-bg-secondary)] active:bg-[#ddd] disabled:bg-[var(--framer-color-bg-tertiary)]":
             variant === "secondary",
-          "bg-red-500 hover:bg-red-600 focus:bg-red-600 active:bg-red-700 disabled:bg-red-500 text-[var(--framer-color-text-reversed)]":
+          "bg-red-500 hover:bg-red-600 focus:bg-red-600 active:bg-red-700 dark:active:bg-red-700 disabled:bg-red-500 text-[var(--framer-color-text-reversed)]":
             variant === "danger",
-          "bg-green-500 hover:bg-green-600 focus:bg-green-600 active:bg-green-700 disabled:bg-green-500 text-[var(--framer-color-text-reversed)]":
+          "bg-green-500 hover:bg-green-600 focus:bg-green-600 active:bg-green-700 dark:active:bg-green-700 disabled:bg-green-500 text-[var(--framer-color-text-reversed)]":
             variant === "success",
         },
         {

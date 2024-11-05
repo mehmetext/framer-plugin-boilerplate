@@ -128,6 +128,13 @@ Yükleme durumları için spinner ve göstergeler:
 
 Tüm bileşenler Framer'ın varsayılan tema değişkenlerini kullanır ve otomatik olarak Dark Mode'u destekler.
 
+### AppBar
+
+Sayfa başlığı ve eylemler için uygun bir yapı:
+
+![AppBar](./public/docs/app-bar.png)
+![AppBar](./public/docs/app-bar-2.png)
+
 ## Plugin Paketleme
 
 Projenizi paketlemek için:

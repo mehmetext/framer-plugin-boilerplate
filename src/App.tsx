@@ -4,7 +4,7 @@ import Home from "./screens/home";
 
 framer.showUI({
   position: "top right",
-  width: 240,
+  resize: true,
 });
 
 export function App() {

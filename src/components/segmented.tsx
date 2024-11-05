@@ -9,21 +9,20 @@ interface SegmentedProps {
   }[];
 }
 
-export default function Segmented({ items }: SegmentedProps) {
-  if (!items) {
-    items = [
-      { value: "yes", label: "Yes" },
-      { value: "no", label: "No" },
-    ];
-  }
-
+export default function Segmented({
+  items = [
+    { value: "yes", label: "Yes" },
+    { value: "no", label: "No" },
+  ],
+}: SegmentedProps) {
   const [selected, setSelected] = useState(items[0]?.value);
 
   return (
-    <div className="bg-[var(--framer-color-bg-tertiary)] rounded-lg p-1 flex">
+    <div className="bg-[var(--framer-color-bg-tertiary)] rounded-lg p-0.5 flex">
       <AnimatePresence>
-        {items.map((item) => (
+        {items.map((item, i) => (
           <SegmentedItem
+            key={i}
             selected={selected === item.value}
             onClick={() => setSelected(item.value)}
           >
@@ -47,7 +46,7 @@ function SegmentedItem({
   return (
     <div
       className={cn(
-        "flex-1 flex items-center justify-center rounded-lg bg-transparent transition relative p-1 text-[var(--framer-color-tint)] cursor-pointer select-none",
+        "flex-1 flex items-center justify-center rounded-lg bg-transparent transition relative p-1.5 text-[var(--framer-color-tint)] cursor-pointer select-none",
         {
           " text-[var(--framer-color-text-tertiary)]": !selected,
         }

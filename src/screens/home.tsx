@@ -45,6 +45,7 @@ export default function Home() {
         <Spinner className="bg-[var(--framer-color-text-reversed)]" />{" "}
         Yükleniyor...
       </Button>
+      <Button variant="success">Success</Button>
       <Input placeholder="input" />
       <Textarea placeholder="textarea" />
       <Select>

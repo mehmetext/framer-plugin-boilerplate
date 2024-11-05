@@ -36,7 +36,7 @@ export default function PageContainer({
           {appBar.actions}
         </header>
       )}
-      <main className="p-2 flex flex-col gap-2">{children}</main>
+      <main className="flex-1 flex flex-col gap-2 px-2 pb-2">{children}</main>
     </div>
   );
 }

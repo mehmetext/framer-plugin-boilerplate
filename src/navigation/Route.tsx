@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { RouteName } from "./routes";
 import { useNavigation } from "./useNavigation";
 
@@ -8,5 +9,9 @@ interface RouteProps {
 
 export function Route({ name, screen: Screen }: RouteProps) {
   const { currentRoute } = useNavigation();
-  return currentRoute?.name === name ? <Screen /> : null;
+  return currentRoute?.name === name ? (
+    <motion.div key={name} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <Screen />
+    </motion.div>
+  ) : null;
 }

@@ -55,7 +55,7 @@ function SegmentedItem({
     >
       {selected && (
         <motion.div
-          className="bg-white absolute inset-0 rounded-md shadow-sm"
+          className="bg-[var(--framer-color-bg)] absolute inset-0 rounded-md shadow-sm"
           layoutId="segmented"
         />
       )}

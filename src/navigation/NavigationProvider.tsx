@@ -1,4 +1,4 @@
-import { ReactNode, useState, useCallback } from "react";
+import { ReactNode, useState, useCallback, useEffect } from "react";
 import { NavigationState, Route } from "./types";
 import { RouteParamList, RouteName } from "./routes";
 import { NavigationContext } from "./useNavigation";
@@ -16,6 +16,16 @@ export function NavigationProvider({
     routes: [{ name: initialRoute }],
     index: 0,
   });
+
+  useEffect(() => {
+    const rootEl = document.querySelector("#root");
+    if (rootEl) {
+      rootEl.scrollTo({
+        top: 0,
+        behavior: "instant",
+      });
+    }
+  }, [state.index]);
 
   const navigate = useCallback(
     <TRouteName extends RouteName>(

@@ -68,16 +68,65 @@ bun dev
 
 ## Hazır Bileşenler
 
-Boilerplate, Framer'ın tasarım sistemine uygun birçok hazır bileşen içerir:
+Boilerplate, Framer'ın tasarım sistemine uygun, kullanıma hazır birçok bileşen içerir:
 
-- `Button`: Birincil, ikincil, tehlike ve başarı varyantları
-- `Input`: Metin, sayı, renk, tarih ve dosya girişleri
-- `Segmented`: Bölümlü kontrol bileşeni
-- `Stepper`: Sayısal değer kontrolü
-- `Checkbox`: İşaret kutusu
-- `Select`: Açılır menü
-- `Textarea`: Çok satırlı metin girişi
-- `Spinner`: Yükleme animasyonu
+### Button
+
+Modern ve kullanışlı buton varyantları:
+
+- Primary (Birincil)
+- Secondary (İkincil)
+- Danger (Tehlike)
+- Success (Başarı)
+
+![Buttons](./public/docs/buttons.png)
+![Buttons](./public/docs/buttons-dark.png)
+
+### Input & Controls
+
+Çeşitli form elemanları:
+
+- Text Input (Metin Girişi)
+- Textarea (Çok Satırlı Metin Alanı)
+- Select (Açılır Menü)
+- Number Input (Sayı Girişi)
+- Color Picker (Renk Seçici)
+- Date Picker (Tarih Seçici)
+- File Upload (Dosya Yükleme)
+- Range Slider (Aralık Kaydırıcı)
+
+![Inputs](./public/docs/inputs.png)
+![Inputs](./public/docs/inputs-dark.png)
+
+### Segmented
+
+Bölümlü seçim kontrolü, özelleştirilebilir seçeneklerle:
+
+![Segmented](./public/docs/segmented.png)
+![Segmented](./public/docs/segmented-dark.png)
+
+### Stepper
+
+Hassas sayısal değer kontrolü:
+
+![Stepper](./public/docs/stepper.png)
+![Stepper](./public/docs/stepper-dark.png)
+
+### Checkbox
+
+Basit ve etkili işaret kutusu:
+
+![Checkbox](./public/docs/checkbox.png)
+![Checkbox](./public/docs/checkbox-dark.png)
+
+### Spinner
+
+Yükleme durumları için spinner ve göstergeler:
+
+![Spinner](./public/docs/spinner.png)
+![Spinner](./public/docs/spinner-dark.png)
+
+Tüm bileşenler Framer'ın varsayılan tema değişkenlerini kullanır ve otomatik olarak Dark Mode'u destekler.
 
 ## Plugin Paketleme
 

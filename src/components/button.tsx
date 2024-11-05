@@ -15,7 +15,7 @@ export default function Button({
   return (
     <button
       className={cn(
-        "flex items-center justify-center gap-2 w-auto px-2.5",
+        "flex items-center justify-center gap-2 h-7.5 w-auto px-2.5",
         {
           "framer-button-primary": variant === "primary",
           "bg-[var(--framer-color-bg-tertiary)] hover:bg-[var(--framer-color-bg-secondary)] active:bg-[#ddd] disabled:bg-[var(--framer-color-bg-tertiary)]":

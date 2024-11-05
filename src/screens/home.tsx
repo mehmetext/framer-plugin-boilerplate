@@ -1,6 +1,7 @@
 import Button from "../components/button";
 import Checkbox from "../components/checkbox";
 import Input from "../components/input";
+import PageContainer from "../components/page-container";
 import Segmented from "../components/segmented";
 import Select from "../components/select";
 import Spinner from "../components/spinner";
@@ -9,7 +10,7 @@ import Textarea from "../components/textarea";
 
 export default function Home() {
   return (
-    <main className="p-2 flex flex-col gap-2">
+    <PageContainer appBar={{ title: "Framer Plugin" }}>
       <Segmented
         items={[
           { value: "yes", label: "Yes" },
@@ -39,6 +40,6 @@ export default function Home() {
       <Spinner />
       <Spinner size="large" />
       <Checkbox />
-    </main>
+    </PageContainer>
   );
 }

@@ -16,6 +16,10 @@ export interface NavigationContextType {
     name: TRouteName,
     params?: RouteParamList[TRouteName]
   ) => void;
+  replace: <TRouteName extends RouteName>(
+    name: TRouteName,
+    params?: RouteParamList[TRouteName]
+  ) => void;
   goBack: () => void;
   canGoBack: () => boolean;
   currentRoute: Route | undefined;

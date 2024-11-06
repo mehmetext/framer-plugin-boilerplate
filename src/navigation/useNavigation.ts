@@ -17,5 +17,9 @@ export function useNavigation() {
       name: TRouteName,
       params?: RouteParamList[TRouteName]
     ) => context.navigate(name, params),
+    replace: <TRouteName extends RouteName>(
+      name: TRouteName,
+      params?: RouteParamList[TRouteName]
+    ) => context.replace(name, params),
   };
 }

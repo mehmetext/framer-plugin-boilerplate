@@ -56,11 +56,28 @@ export function NavigationProvider({
 
   const currentRoute = state.routes[state.index];
 
+  const replace = useCallback(
+    <TRouteName extends RouteName>(
+      name: TRouteName,
+      params?: RouteParamList[TRouteName]
+    ) => {
+      setState((prev) => ({
+        routes: [
+          ...prev.routes.slice(0, prev.index),
+          { name, params } as Route<RouteParamList[TRouteName]>,
+        ],
+        index: prev.index,
+      }));
+    },
+    []
+  );
+
   return (
     <NavigationContext.Provider
       value={{
         state,
         navigate,
+        replace,
         goBack,
         canGoBack,
         currentRoute,

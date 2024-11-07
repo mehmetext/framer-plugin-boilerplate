@@ -14,6 +14,7 @@ export function Route({ name, screen: Screen }: RouteProps) {
       key={name}
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
+      className="min-h-full flex flex-col"
     >
       <Screen />
     </motion.div>

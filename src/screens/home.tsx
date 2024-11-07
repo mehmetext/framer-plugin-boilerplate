@@ -54,10 +54,16 @@ export default function Home() {
       <Button variant="success">Success</Button>
       <Input placeholder="input" />
       <Textarea placeholder="textarea" />
-      <Select>
-        <option value="1">1</option>
-        <option value="2">2</option>
-      </Select>
+      <Select
+        value="1"
+        items={[
+          { label: "1", value: "1" },
+          { label: "2", value: "2" },
+        ]}
+        onChange={(value) => {
+          console.log(value);
+        }}
+      />
       <Input type="color" />
       <Input type="range" />
       <Input type="date" />

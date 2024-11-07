@@ -1,34 +1,46 @@
-import { useId, useState } from "react";
+import { Fragment, useEffect, useId, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "../lib/utils";
 
-interface SegmentedProps {
+interface SegmentedProps<T = string> {
   items?: {
-    value: string;
+    value: T;
     label: string;
   }[];
-  value?: string;
-  onChange?: (value: string) => void;
+  value?: T;
+  onChange?: (value: T) => void;
+  disabled?: boolean;
 }
 
-export default function Segmented({
+export default function Segmented<T>({
   items = [
-    { value: "yes", label: "Yes" },
-    { value: "no", label: "No" },
-  ],
+    { value: true, label: "Yes" },
+    { value: false, label: "No" },
+  ] as { value: T; label: string }[],
   value,
   onChange,
-}: SegmentedProps) {
-  const [selected, setSelected] = useState(value ?? items[0]?.value);
+  disabled,
+}: SegmentedProps<T>) {
+  const [selected, setSelected] = useState<T>(value ?? items[0]?.value);
   const layoutId = useId();
 
+  useEffect(() => {
+    setSelected(value ?? items[0]?.value);
+  }, [items, value]);
+
   return (
-    <div className="h-7.5 bg-[var(--framer-color-bg-tertiary)] rounded-lg p-1 flex">
+    <div
+      className={cn(
+        "h-7.5 bg-[var(--framer-color-bg-tertiary)] rounded-lg p-1 flex",
+        {
+          "opacity-70 pointer-events-none !cursor-not-allowed": disabled,
+        }
+      )}
+    >
       <AnimatePresence>
         {items.map((item, i) => (
-          <>
+          <Fragment key={i}>
             <SegmentedItem
-              key={i}
               selected={selected === item.value}
               onClick={() => {
                 setSelected(item.value);
@@ -52,7 +64,7 @@ export default function Segmented({
                 )}
               />
             )}
-          </>
+          </Fragment>
         ))}
       </AnimatePresence>
     </div>
